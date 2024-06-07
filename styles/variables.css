@@ -1,18 +1,34 @@
 :root {
+  /* Цветовая палитра сайта */
   --main-color: #353430;
   --main-color-transparent: rgba(50, 49, 45, 0.4);
   --background-color: #fff1f7;
-  --accent-color-pale: #ff8dcb;
+  --accent-color: #ff8dcb;
+  --accent-color-pale: #ffc2e6;
   --accent-color-bright: #ff0070;
+  /* --accent-color-dirty: #f1b2ce; */
   --accent-color-bright-transparent: rgba(255, 0, 112, 0.4);
-  --title-color: #ffc2e6;
+
+  /* Цвета различных элементов для светлой темы */
+  --nav-font-color: var(--main-color);
+  --title-color: var(--accent-color-pale);
+  --shadow-color: var(--accent-color);
+  --border-color: var(--main-color);
+  --text-accent-color: var(--main-color);
+  --background-accent-color: var(--accent-color);
+
+  --title-font-size-small: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --title-font-size-large: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --font-family: "IBM Plex mono";
   --font-size-main: 18px;
-  --line-height-small: 0.525;
-  --line-height-medium: 1;
-  --line-height-large: 1.3;
-  --padding-small: 10px;
-  --padding-medium: 20px;
+  --line-height-title: 0.82;
+  --line-height-nav: 1;
+  --line-height-main: 1.3;
+  --spacer-small: 10px;
+  --spacer-medium: 20px;
+  --background-image: url("../images/cover-image-light.png");
+  /* --border-normal: 1px solid var(--main-color); */
+  --border-transparent: 1px solid var(--main-color-transparent);
 }
 /* Светлая тема */
 /* текст заголовка: #FFC2E6;  */

@@ -5,7 +5,21 @@
   background-color: var(--background-color);
   color: var(--main-color);
   font-family: var(--font-family);
+  font-size: var(--font-size-main);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+/* Стили, относящиеся к нескольким элементам и секциям на странице */
+
+.text-accent {
+  font-weight: bold;
+  color: var(--text-accent-color);
+}
+
+/* Стили шапки сайта */
 
 .header {
   display: grid;
@@ -14,9 +28,47 @@
   align-items: center;
   block-size: 100vh;
   min-block-size: 668px;
-  padding: var(--padding-small);
+  padding: var(--spacer-small);
 }
 
 .header__rec {
   text-transform: uppercase;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: var(--spacer-small);
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  min-height: 26px;
+  text-transform: lowercase;
+  line-height: var(--line-height-nav);
+  background-color: transparent;
+  padding: 0 13px 3px;
+  color: var(--nav-font-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--border-color);
+}
+
+.header__title {
+  font-size: var(--title-font-size-small);
+  line-height: var(--line-height-title);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+.header__description {
+  background-color: var(--background-accent-color);
+  line-height: var(--line-height-main);
+}
+
+:is(.header)::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid red;
 }
