@@ -19,6 +19,10 @@
   color: var(--text-accent-color);
 }
 
+.background-decor {
+  background-color: var(--background-accent-color);
+}
+
 /* Стили шапки сайта */
 
 .header {
@@ -86,7 +90,7 @@
   border: 1px solid var(--hover-color);
 }
 
-.header__title {
+.title {
   font-size: var(--title-font-size-small);
   line-height: var(--line-height-title);
   color: var(--title-color);
@@ -94,7 +98,6 @@
 }
 
 .header__description {
-  background-color: var(--background-accent-color);
   line-height: var(--line-height-main);
 }
 
@@ -121,4 +124,15 @@
   left: var(--spacer-small);
   border-top: none;
   border-right: none;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  /* grid-template-rows: 1fr min-content 1fr; */
+  justify-items: center;
+  align-items: center;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding: var(--spacer-small);
 }

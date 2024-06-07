@@ -18,20 +18,19 @@
   --background-accent-color: var(--accent-color);
   --hover-color: var(--main-color-transparent);
 
-  --title-font-size-small: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --title-font-size-large: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --font-family: "IBM Plex mono";
   --font-size-main: 18px;
+  --title-font-size-small: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --title-font-size-large: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --line-height-title: 0.82;
   --line-height-nav: 1;
   --line-height-main: 1.3;
   --spacer-small: 10px;
   --spacer-medium: 20px;
-  --background-image: url("../images/cover-image-light.png");
-  /* --border-normal: 1px solid var(--main-color); */
-  --border-transparent: 1px solid var(--main-color-transparent);
+  --spacer-large: 40px;
+  --spacer-xlarge: 60px;
 
-  /* Отступы и другие параметры для элемента REC в шапке сайта */
+  --background-image: url("../images/cover-image-light.png");
   --rec-display: none;
 }
 /* Светлая тема */
