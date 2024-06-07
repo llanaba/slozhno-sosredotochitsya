@@ -19,6 +19,7 @@
   --shadow-color: var(--accent-color-bright);
   --background-accent-color: var(--accent-color-bright);
   --rec-display: inline-block;
+  --hover-color: var(--accent-color-bright-transparent);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -14,7 +14,7 @@
 
 /* Стили, относящиеся к нескольким элементам и секциям на странице */
 
-.text-accent {
+.title-decor {
   font-weight: bold;
   color: var(--text-accent-color);
 }
@@ -66,10 +66,24 @@
   background-color: transparent;
   padding: 0 13px 3px;
   color: var(--nav-font-color);
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid var(--border-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--border-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-color);
 }
 
 .header__title {
@@ -84,6 +98,7 @@
   line-height: var(--line-height-main);
 }
 
+/* :is(header, .card) p:hover  */
 /* :is(.header)::before { */
 .header::before,
 .header::after {
