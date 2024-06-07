@@ -11,7 +11,8 @@
 
   /* Цвета различных элементов для светлой темы */
   --nav-font-color: var(--main-color);
-  --title-color: var(--accent-color-pale);
+  --main-title-color: var(--accent-color-pale);
+  --title-color: var(--main-color);
   --shadow-color: var(--accent-color);
   --border-color: var(--main-color);
   --text-accent-color: var(--main-color);

@@ -12,7 +12,8 @@
   --background-color: #000028;
   --background-image: url("../images/cover-image-dark.png");
   --main-color: #f1b2ce;
-  --title-color: #db00ff;
+  --main-title-color: #db00ff;
+  --title-color: var(--accent-color-bright);
   --text-accent-color: #000028;
   --nav-font-color: var(--accent-color-bright);
   --border-color: var(--accent-color-bright);
