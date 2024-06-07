@@ -1,5 +1,22 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Основные стили проекта. За основу взята светлая тема (light). */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  min-inline-size: 375px;
+  background-color: var(--background-color);
+  color: var(--main-color);
+  font-family: var(--font-family);
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: end;
+  align-items: center;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding: var(--padding-small);
+}
+
+.header__rec {
+  text-transform: uppercase;
 }
