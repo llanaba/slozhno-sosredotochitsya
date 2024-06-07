@@ -18,6 +18,7 @@
   --border-color: var(--accent-color-bright);
   --shadow-color: var(--accent-color-bright);
   --background-accent-color: var(--accent-color-bright);
+  --rec-display: inline-block;
 }
 
 @media (prefers-color-scheme: dark) {

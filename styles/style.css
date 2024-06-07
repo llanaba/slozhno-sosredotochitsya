@@ -22,6 +22,7 @@
 /* Стили шапки сайта */
 
 .header {
+  position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   justify-items: end;
@@ -32,7 +33,24 @@
 }
 
 .header__rec {
+  position: absolute;
+  top: var(--spacer-small);
+  right: 20px;
+  display: var(--rec-display);
   text-transform: uppercase;
+  color: var(--accent-color-bright);
+}
+
+.header__rec::after {
+  content: "";
+  display: inline-block;
+  inline-size: 7px;
+  block-size: 7px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 3px var(--accent-color-bright);
+  margin-inline-start: 10px;
+  margin-block-end: 2px;
+  background-color: var(--accent-color-bright);
 }
 
 .header__theme-menu-list {
@@ -66,9 +84,26 @@
   line-height: var(--line-height-main);
 }
 
-:is(.header)::before {
+/* :is(.header)::before { */
+.header::before,
+.header::after {
   content: "";
-  width: 10px;
-  height: 10px;
-  border: 1px solid red;
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border: 1px solid var(--border-color);
+}
+
+.header::before {
+  top: var(--spacer-small);
+  right: var(--spacer-small);
+  border-bottom: none;
+  border-left: none;
+}
+
+.header::after {
+  bottom: var(--spacer-small);
+  left: var(--spacer-small);
+  border-top: none;
+  border-right: none;
 }
