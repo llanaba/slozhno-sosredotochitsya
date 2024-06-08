@@ -105,7 +105,9 @@
 /* :is(header, .card) p:hover  */
 /* :is(.header)::before { */
 .header::before,
-.header::after {
+.header::after,
+.footer::before,
+.footer::after {
   content: "";
   position: absolute;
   inline-size: 25px;
@@ -113,14 +115,16 @@
   border: 1px solid var(--border-color);
 }
 
-.header::before {
+.header::before,
+.footer::before {
   top: var(--spacer-small);
   right: var(--spacer-small);
   border-bottom: none;
   border-left: none;
 }
 
-.header::after {
+.header::after,
+.footer::after {
   bottom: var(--spacer-small);
   left: var(--spacer-small);
   border-top: none;
@@ -137,6 +141,14 @@
   padding-top: 40px;
 }
 
+.page__section:last-of-type {
+  padding-bottom: 40px;
+}
+
+.page__section.illustrations {
+  gap: var(--spacer-small);
+}
+
 .section__title {
   color: var(--title-color);
   font-size: var(--font-size-main);
@@ -147,9 +159,28 @@
   margin-bottom: var(--spacer-small);
 }
 
+.how .section__subtitle {
+  font-weight: normal;
+}
+
+.illustrations .section__subtitle {
+  margin-bottom: 0;
+}
+
 .section__content {
   display: grid;
   gap: var(--spacer-medium);
+}
+
+.gallery {
+  display: grid;
+  gap: var(--spacer-small);
+}
+
+.gallery__image {
+  display: block;
+  object-fit: contain;
+  inline-size: 100%;
 }
 
 .footer {
