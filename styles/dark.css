@@ -26,5 +26,16 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #000028;
+    --background-image: url("../images/cover-image-dark.png");
+    --main-color: #f1b2ce;
+    --main-title-color: #db00ff;
+    --title-color: var(--accent-color-bright);
+    --text-accent-color: #000028;
+    --nav-font-color: var(--accent-color-bright);
+    --border-color: var(--accent-color-bright);
+    --shadow-color: var(--accent-color-bright);
+    --background-accent-color: var(--accent-color-bright);
+    --rec-display: inline-block;
+    --hover-color: var(--accent-color-bright-transparent);
   }
 }

@@ -34,12 +34,12 @@
   align-items: center;
   block-size: 100vh;
   min-block-size: 668px;
-  padding: var(--spacer-small);
+  padding: var(--page-padding);
 }
 
 .header__rec {
   position: absolute;
-  top: var(--spacer-small);
+  top: var(--page-padding);
   right: 20px;
   display: var(--rec-display);
   text-transform: uppercase;
@@ -96,11 +96,12 @@
   line-height: var(--line-height-title);
   color: var(--main-title-color);
   text-shadow: 4px 4px 0 var(--shadow-color);
+  justify-self: start;
 }
 
-/* .header__description {
-  line-height: var(--line-height-main);
-} */
+.header__description {
+  max-inline-size: 364px;
+}
 
 /* :is(header, .card) p:hover  */
 /* :is(.header)::before { */
@@ -117,16 +118,16 @@
 
 .header::before,
 .footer::before {
-  top: var(--spacer-small);
-  right: var(--spacer-small);
+  top: var(--page-padding);
+  right: var(--page-padding);
   border-bottom: none;
   border-left: none;
 }
 
 .header::after,
 .footer::after {
-  bottom: var(--spacer-small);
-  left: var(--spacer-small);
+  bottom: var(--page-padding);
+  left: var(--page-padding);
   border-top: none;
   border-right: none;
 }
@@ -134,7 +135,7 @@
 .page__section {
   display: grid;
   gap: var(--spacer-medium);
-  padding: 0 10px 50px;
+  padding: 0 var(--page-padding) 50px;
 }
 
 .page__section:first-of-type {
@@ -174,7 +175,7 @@
 
 .gallery {
   display: grid;
-  gap: var(--spacer-small);
+  gap: var(--gallery-gap);
 }
 
 .gallery__image {
@@ -190,4 +191,40 @@
   align-items: center;
   block-size: 100vh;
   min-block-size: 668px;
+}
+
+@media (width >= 768px) {
+  :root {
+    --page-padding: var(--spacer-medium);
+  }
+
+  .header .title {
+    margin-inline-start: -20px;
+  }
+
+  .why {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .page__section {
+    padding: 0 var(--page-padding) 80px;
+  }
+
+  .page__section:first-of-type {
+    padding-top: 60px;
+  }
+
+  .section__title {
+    max-inline-size: 236px;
+    /* grid-column: 1 / 2; */
+  }
+
+  .how {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: minmax(23px, auto);
+  }
+
+  .tips {
+    grid-column: 2 / 3;
+  }
 }
