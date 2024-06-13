@@ -13,8 +13,6 @@
   background-attachment: fixed;
 }
 
-/* Стили, относящиеся к нескольким элементам и секциям на странице */
-
 .title-decor {
   font-weight: bold;
   color: var(--text-accent-color);
@@ -23,8 +21,6 @@
 .background-decor {
   background-color: var(--background-accent-color);
 }
-
-/* Стили шапки сайта */
 
 .header {
   position: relative;
@@ -99,8 +95,13 @@
   justify-self: start;
 }
 
+.footer .title {
+  justify-self: center;
+}
+
 .header__description {
-  max-inline-size: 364px;
+  /* max-inline-size: 364px; */
+  max-inline-size: 50%;
 }
 
 /* :is(header, .card) p:hover  */
@@ -173,6 +174,11 @@
   gap: var(--spacer-medium);
 }
 
+.tips {
+  display: grid;
+  gap: var(--spacer-medium);
+}
+
 .gallery {
   display: grid;
   gap: var(--gallery-gap);
@@ -196,10 +202,15 @@
 @media (width >= 768px) {
   :root {
     --page-padding: var(--spacer-medium);
+    --gallery-gap: var(--spacer-medium);
   }
 
   .header .title {
     margin-inline-start: -20px;
+  }
+
+  .header__rec {
+    right: 30px;
   }
 
   .why {
@@ -214,17 +225,91 @@
     padding-top: 60px;
   }
 
+  .page__section:last-of-type {
+    padding-bottom: 60px;
+  }
+
   .section__title {
     max-inline-size: 236px;
-    /* grid-column: 1 / 2; */
   }
 
   .how {
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: minmax(23px, auto);
   }
 
-  .tips {
-    grid-column: 2 / 3;
+  .illustrations .section__subtitle {
+    margin-bottom: var(--spacer-small);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
+
+  .gallery__image {
+    object-fit: cover;
+    block-size: 100%;
+  }
+
+  .sunset {
+    grid-area: sunset;
+  }
+
+  .ice-cream {
+    grid-area: ice-cream;
+  }
+
+  .tape {
+    grid-area: tape;
+  }
+
+  .books {
+    grid-area: books;
+  }
+
+  .street {
+    grid-area: street;
+  }
+}
+
+@media (width >= 1024px) {
+  :root {
+    --shadow-color: var(--accent-color-bright);
+  }
+
+  .header {
+    align-items: start;
+    justify-items: center;
+  }
+
+  .header__theme-menu-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .title {
+    font-size: var(--title-font-size-large);
+    text-shadow: 4px 4px 0 var(--accent-color-bright);
+  }
+
+  .header__description {
+    align-self: center;
+    justify-self: end;
+  }
+
+  .section__title {
+    max-inline-size: 314px;
+  }
+
+  .why,
+  .how {
+    gap: 10px;
+  }
+
+  .what .section__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
