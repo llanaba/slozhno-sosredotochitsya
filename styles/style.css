@@ -163,6 +163,11 @@
   font-size: var(--font-size-main);
 }
 
+.section__title-accent {
+  font-size: var(--font-size-main);
+  font-weight: bold;
+}
+
 .section__subtitle {
   font-size: var(--font-size-main);
   margin-bottom: var(--spacer-small);
