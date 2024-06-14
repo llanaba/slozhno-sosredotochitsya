@@ -22,6 +22,21 @@
   background-color: var(--background-accent-color);
 }
 
+.link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--shadow-color);
+}
+
+.link:focus,
+link:focus-visible {
+  outline: 1px solid var(--main-color);
+}
+
+.link:hover {
+  outline: none;
+  border-bottom: 1px solid var(--main-color);
+}
+
 .header {
   position: relative;
   display: grid;
@@ -163,6 +178,10 @@
 
 .how .section__subtitle {
   font-weight: normal;
+}
+
+.tips .section__subtitle {
+  color: #353430;
 }
 
 .illustrations .section__subtitle {
