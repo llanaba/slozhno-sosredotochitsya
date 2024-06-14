@@ -28,12 +28,11 @@
 }
 
 .link:focus,
-link:focus-visible {
+.link:focus-visible {
   outline: 1px solid var(--main-color);
 }
 
 .link:hover {
-  outline: none;
   border-bottom: 1px solid var(--main-color);
 }
 
@@ -112,10 +111,6 @@ link:focus-visible {
 
 .footer .title {
   justify-self: center;
-}
-
-.header__description {
-  max-inline-size: 50%;
 }
 
 .header::before,
@@ -216,17 +211,16 @@ link:focus-visible {
 }
 
 @media (width >= 768px) {
-  :root {
-    --page-padding: var(--spacer-medium);
-    --gallery-gap: var(--spacer-medium);
-  }
-
   .header .title {
     margin-inline-start: -20px;
   }
 
   .header__rec {
     right: 30px;
+  }
+
+  .header__description {
+    max-inline-size: 50%;
   }
 
   .why {
@@ -247,6 +241,10 @@ link:focus-visible {
 
   .section__title {
     max-inline-size: 236px;
+  }
+
+  .section__content .section__title {
+    max-inline-size: 100%;
   }
 
   .how {
@@ -292,10 +290,6 @@ link:focus-visible {
 }
 
 @media (width >= 1024px) {
-  :root {
-    --shadow-color: var(--accent-color-bright);
-  }
-
   .header {
     align-items: start;
     justify-items: center;
