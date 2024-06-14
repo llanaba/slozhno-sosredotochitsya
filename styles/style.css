@@ -115,12 +115,9 @@ link:focus-visible {
 }
 
 .header__description {
-  /* max-inline-size: 364px; */
   max-inline-size: 50%;
 }
 
-/* :is(header, .card) p:hover  */
-/* :is(.header)::before { */
 .header::before,
 .header::after,
 .footer::before,
